@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Walk</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="video-background">
+      <div class="video-foreground">
+        <iframe
+          src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=1&autoplay=1&loop=1&playlist=W0LHTWG-UmQ"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <div id="control-panel">
+      
+    </div>
+    <div id="mySidebar" class="sidebar">
+      <iframe
+        id="spotify-controller"
+        src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM"
+        width="300"
+        height="380"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media">
+      </iframe>
+    </div>
+
+    <div id="main">
+      <button class="toggleBtn" onclick="toggleSidebar()">☰</button>
+    </div>
+
+    <script>
+      var isSidebarOpen = false;
+      function toggleSidebar() {
+        if (isSidebarOpen) {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+          isSidebarOpen = !isSidebarOpen;
+        }
+        else {
+          document.getElementById("mySidebar").style.width = "320px";
+          document.getElementById("main").style.marginLeft = "30%";
+          isSidebarOpen = !isSidebarOpen;
+        }
+      }
+      // function closeNav() {
+      //   document.getElementById("mySidebar").style.width = "0";
+      //   document.getElementById("main").style.marginLeft = "0";
+      // }
+    </script>
+  </body>
+</html>
